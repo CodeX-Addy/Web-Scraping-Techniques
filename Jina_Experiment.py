@@ -1,3 +1,4 @@
+## It will generates md format output so suitable for llm use cases
 import requests
 
 def jina_readerapi_web_scraping(url):
