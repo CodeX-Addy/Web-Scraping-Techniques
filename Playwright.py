@@ -11,7 +11,6 @@ def scrape_page():
         print("Page Title:", title)
         links = page.eval_on_selector_all("a", "elements => elements.map(a => a.href)")
         print("Links:", links)
-
         browser.close()
 
 scrape_page()
