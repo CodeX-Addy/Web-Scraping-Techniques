@@ -1,17 +1,22 @@
-## Selenium Keyword Searching (Test)
+## Selenium for dynamic scraping
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-import time
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome()
-driver.get("http://www.python.org")
-assert "Python" in driver.title
-elem = driver.find_element(By.NAME, "q")
-elem.clear()
-elem.send_keys("pycon")
-time.sleep(10)
-elem.send_keys(Keys.RETURN)
-assert "No results found." not in driver.page_source
-driver.close()
+chrome_options = Options()
+chrome_options.add_argument("--headless") 
+service = Service(executable_path="/path/to/chromedriver")
+driver = webdriver.Chrome(service=service, options=chrome_options)
+
+url = "https://example.com"
+driver.get(url)
+
+title = driver.title
+print("Page Title:", title)
+
+links = [a.get_attribute('href') for a in driver.find_elements(By.TAG_NAME, 'a')]
+print("Links:", links)
+
+driver.quit()
