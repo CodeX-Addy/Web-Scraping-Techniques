@@ -9,4 +9,6 @@ url = "https://en.wikipedia.org/wiki/Transformers_(film_series)"
 
 data = jina_readerapi_web_scraping(url)
 
-print(data)
+with open("data.md", "w", encoding="utf-8") as file:
+    file.write(data)
+
