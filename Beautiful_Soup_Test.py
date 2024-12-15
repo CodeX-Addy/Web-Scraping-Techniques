@@ -7,6 +7,5 @@ def beautiful_soup_web_scraping(url):
     return str(soup)
 
 url = "https://medium.com/kx-systems/rag-llamaparse-advanced-pdf-parsing-for-retrieval-c393ab29891b"
-
 bs4data=beautiful_soup_web_scraping(url)
 print(bs4data)
