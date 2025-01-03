@@ -39,10 +39,6 @@ cd Web-Scraping-Techniques
    - Formats: CSV, JSON, SQLite, MongoDB
 
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or additional features.
-
 ## License
 
 This project is licensed under the GPL 3.0 License. See the [LICENSE](LICENSE) file for details.
