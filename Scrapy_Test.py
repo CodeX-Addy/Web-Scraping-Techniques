@@ -6,13 +6,12 @@ class ExampleSpider(scrapy.Spider):
 
     def parse(self, response):
         title = response.xpath('//title/text()').get()
-        print("Page Title:", title)
+        print("Title:", title)
 
         links = response.xpath('//a/@href').getall()
         print("Links:", links)
 
 ## Usage
-"""
-pip install scrapy
+"""pip install scrapy
 scrapy runspider Scrapy_Test.py
 """
