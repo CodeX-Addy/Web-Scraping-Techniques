@@ -8,7 +8,7 @@ def scrape_page():
         page.goto(url)
 
         title = page.title()
-        print("Page Title:", title)
+        print("Title:", title)
         links = page.eval_on_selector_all("a", "elements => elements.map(a => a.href)")
         print("Links:", links)
         browser.close()
